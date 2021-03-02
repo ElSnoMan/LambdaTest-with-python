@@ -17,6 +17,11 @@ class TodoPage:
     def get_all_todos(self) -> Elements:
         return self.py.find("li[ng-repeat*='todo'] > input")
 
+    def add_todo(self, name: str) -> 'TodoPage':
+        self.py.get('#sampletodotext').type(name)
+        self.py.get('#addbutton').click()
+        return self
+
 
 @pytest.fixture
 def page(py: Pylenium):
@@ -42,3 +47,9 @@ def test_check_all_items(py: Pylenium, page: TodoPage):
         todo.click()
 
     assert py.contains('0 of 5 remaining')
+
+
+def test_add_new_item(py: Pylenium, page: TodoPage):
+    page.add_todo('Finish the course')
+    assert page.get_all_todos().should().have_length(6)
+    assert py.contains('6 of 6 remaining')
