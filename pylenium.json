@@ -6,12 +6,12 @@
     "page_load_wait_time": 0,
     "options": [],
     "capabilities": {
-        "build": "pytest build",
+        "build": "pytest build 2",
         "name": "pytest tutorial",
-        "platform": "Windows 10",
-        "browserName": "Chrome",
-        "version": "87.0",
-        "resolution": "1024x768",
+        "platform": "macOS Sierra",
+        "browserName": "Edge",
+        "version": "85",
+        "resolution": "1920x1080",
         "console": "true",
         "network": "true"
     },
