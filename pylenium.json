@@ -5,7 +5,16 @@
     "wait_time": 10,
     "page_load_wait_time": 0,
     "options": [],
-    "capabilities": {},
+    "capabilities": {
+        "build": "pytest build",
+        "name": "pytest tutorial",
+        "platform": "Windows 10",
+        "browserName": "Chrome",
+        "version": "87.0",
+        "resolution": "1024x768",
+        "console": "true",
+        "network": "true"
+    },
     "version": "latest",
     "experimental_options": null,
     "extension_paths": [],
