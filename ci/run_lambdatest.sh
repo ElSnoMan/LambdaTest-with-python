@@ -9,7 +9,7 @@ REMOTE_URL="https://$LT_USERNAME:$LT_ACCESS_KEY@hub.lambdatest.com/wd/hub"
     # > config settings
     # > if/else conditionals
     # > and so much more!
-FILTER="tests/test_cross_browser.py" # change/override this as needed!
+FILTER="tests/test_one_test_against_many_browsers.py" # change/override this as needed!
 
 # 3. Execute the command
 python -m pytest $FILTER --remote_url=$REMOTE_URL -n 2
